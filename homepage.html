@@ -1,24 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .nav{
-            background-color: gray;
-            width: 100%;
-            height: 88px;
-            display: flex;
-            justify-content: space-between;
-
-        }
+      body {
+        margin: 0px;
+        font-size: 16px;
+      }
+      .Products {
+        width: 100%;
+        height: 1632px;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+      .toptext {
+        width: 100%;
+        height: 32px;
+        background-color: gold;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 56px;
+      }
+      .toptext p {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+      .card1 {
+        width: 343px;
+        height: 352px;
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 32px;
+        margin-left: 8px;
+      }
+      .line1 {
+        border: 2px solid #f6f6f6;
+        width: 163.5px;
+        height: 352px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      #like {
+        width: 32px;
+        height: 32px;
+        margin-left: 119.5px;
+        margin-right: 12px;
+        margin-top: 24px;
+      }
+      #iphone {
+        width: 104px;
+        height: 104px;
+        margin-top: 8px;
+        margin-left: 29.75px;
+        margin-right: 29.75px;
+      }
+      #apple{   
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .line1 h1{
+        text-align: center;
+        font-size: 16px;
+      }
+      .buynowbutton{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .buynowbutton img{
+        width: 139.5px;
+        height: auto;
+      }
+      .line2 {
+        border: 2px solid #f6f6f6;
+        width: 163.5px;
+        height: 352px;
+        border-radius: 10px;
+      }
+      .line2 {
+        border: 2px solid #f6f6f6;
+        width: 163.5px;
+        height: 352px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      #camera{
+        width: 104px;
+        height: 104px;
+        margin-top: 8px;
+        margin-left: 29.75px;
+        margin-right: 29.75px;
+      }
+      #camerainfo{
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+      }
+      .line2 h1{
+        text-align: center;
+        font-size: 16px;
+      }
     </style>
-</head>
-<body>
-    <div class="nav">
-<img src="images/Logo.png" alt="">
-<img src="images/Burger.png" alt="">
+  </head>
+  <body>
+    <div class="Products">
+      <div class="toptext">
+        <p>New Arrival</p>
+        <p>Bestseller</p>
+        <p>Featured Products</p>
+      </div>
+      <div class="card1">
+        <div class="line1">
+          <img id="like" src="images/Like.png" />
+          <img id="iphone" src="images/Iphone 14 pro 1.png" />
+          <p id="apple">Apple iPhone 14 Pro<br>
+             Max 128GB Deep Purple</p>
+          <h1>$900</h1>
+          <button class="buynowbutton">
+            <img src="images/Button.png" alt="Görsel">
+          </button>
+        </div>
+        <div class="line2">
+            <img id="like" src="images/Like.png" />
+            <img id="camera" src="images/bmpcc 6k.png">
+            <p id="camerainfo">Blackmagic Pocket Cinema Camera 6k</p>
+            <h1>$2535</h1>
+            <button class="buynowbutton">
+                <img src="images/Button.png" alt="Görsel">
+              </button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
