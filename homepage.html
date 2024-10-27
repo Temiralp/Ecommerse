@@ -3,22 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+        body{
+            margin: 0px;
+        }
         .nav{
-            background-color: gray;
+            background-color: #FFFFFF;
+            ;
             width: 100%;
             height: 88px;
             display: flex;
             justify-content: space-between;
-
+            align-items: center;
+            
+            border-bottom: 1px solid #B5B5B5;
+            
+        }
+        #cyber
+        {
+           width: 65.4px;
+           height: 22.87px; 
+        }
+        #burger
+        {
+            width: 40px;
+            height: 40px;
+        }
+        .giris
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            background-color: #211C24;
+        }
+        #beyond
+        {
+           font-family: Figtree;
+           font-weight: 600;
+           font-size: 25px;
+           line-height: 32px;
+           color: #FFFFFF
+        }
+        #phone
+        {
+            font-family: ;
+            font-weight: 200;
+            font-size: 72px;
+            line-height: 72px;
+            color: #FFFFFF;
+        }
+        #text1
+        {
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 24px;
+            color:#909090;
+        }
+        #shopnow
+        {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
         }
     </style>
 </head>
 <body>
     <div class="nav">
-<img src="images/Logo.png" alt="">
-<img src="images/Burger.png" alt="">
+<img id="cyber" src ="images/Logo.png" alt="">
+<img id="burger" src="images/Burger.png" alt="">
+    </div>
+    <div class="giris">
+        <p id="beyond">
+            Pro.Beyond.
+        </p>
+        <p id ="phone">IPhone 14 Pro</p>
+        <p id="text1">Created to change everything for the<br>better.For everyone</p>
+        <p id="shopnow">Shop Now</p>
+        <img src="images/Iphone Image.png">
     </div>
 </body>
 </html>
