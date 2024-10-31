@@ -73,9 +73,28 @@
         }
 
         .breadcrumbs {
-            background-color: #d0e0ff;
-            padding: 15px;
-            margin-bottom: 20px;
+            background-color: white;
+            color: black;
+            padding: 15px 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .breadcrumbs a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumbs a:hover {
+            color: #7d7ff5;
+        }
+
+        .breadcrumb-arrow {
+            width: 10px;
+            height: 10px;
         }
 
         .frame {
@@ -84,35 +103,196 @@
             padding: 20px;
             gap: 20px;
             margin-bottom: 20px;
-            background-color: #f0f0f0;
+            background-color: #fff;
         }
 
         .filters {
-            width: 100%;
-            background-color: #fff9d6;
+            background-color: #fff;
             padding: 15px;
+            border-radius: 8px;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-category {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .filter-header {
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .filter-content {
+            padding-top: 10px;
+        }
+
+        .filter-category.active .filter-content {
+            display: block;
+        }
+
+        .filter-search {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            font-size: 14px;
+            text-align: left;
+            width: 100%;
+        }
+
+        label input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        label span {
+            margin-left: auto;
+            color: #888;
+            font-size: 12px;
         }
 
         .products {
             width: 100%;
-            background-color: #ffe5cc;
+            background-color: #fff;
             padding: 15px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100% - 20px);
+
         }
 
         .item {
             background-color: #ffe0f0;
-            padding: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .page-number {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .page-number.active {
+            background-color: black;
+            color: white;
+        }
+
+        .page-number:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dots {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            color: black;
         }
 
         .footer {
             background-color: black;
             color: white;
-            padding: 15px;
-            margin-top: 20px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
         }
+
+        .footer-section {
+            flex: 1;
+        }
+
+        .footer-logo {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .footer-description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .footer-links li:hover {
+            color: #7d7ff5;
+        }
+
 
         @media (min-width: 768px) {
             .frame {
@@ -127,7 +307,6 @@
                 width: 70%;
             }
         }
-
     </style>
 </head>
 
@@ -135,7 +314,7 @@
     <div class="container">
         <nav class="nav">
             <div class="nav-left">
-                <img src="images/Logo.png"alt="Logo" class="logo">
+                <img src="images/Logo.png" Logo" class="logo">
             </div>
             <div class="nav-center">
                 <input type="text" placeholder="Search" class="search-bar">
@@ -150,12 +329,50 @@
                 <img src="images/User.png" alt="User" class="icon">
             </div>
         </nav>
-        <div class="breadcrumbs"></div>
+
+        <div class="breadcrumbs">
+            <a href="#">Home</a>
+            <img src="images/Arrow.png" alt="Arrow" class="breadcrumb-arrow">
+            <a href="#">Catalog</a>
+            <img src="images/Arrow.png" alt="Arrow" class="breadcrumb-arrow">
+            <a href="#">Smartphones</a>
+        </div>
 
         <div class="frame">
-            <div class="filters"></div>
+            <div class="filters">
+                <div class="filter-category">
+                    <button class="filter-header">Brand</button>
+                    <div class="filter-content">
+                        <input type="text" placeholder="Search" class="filter-search">
+                        <label><input type="checkbox"> Apple <span>110</span></label>
+                        <label><input type="checkbox"> Samsung <span>125</span></label>
+                        <label><input type="checkbox"> Xiaomi <span>68</span></label>
+                        <label><input type="checkbox"> Poco <span>44</span></label>
+                        <label><input type="checkbox"> OPPO <span>36</span></label>
+                        <label><input type="checkbox"> Honor <span>10</span></label>
+                        <label><input type="checkbox"> Motorola <span>34</span></label>
+                        <label><input type="checkbox"> Nokia <span>22</span></label>
+                        <label><input type="checkbox"> Realme <span>35</span></label>
+                    </div>
+                </div>
+                <div class="filter-category">
+                    <button class="filter-header">Battery capacity</button>
+                </div>
+                <div class="filter-category">
+                    <button class="filter-header">Screen type</button>
+                </div>
+                <div class="filter-category">
+                    <button class="filter-header">Screen diagonal</button>
+                </div>
+                <div class="filter-category">
+                    <button class="filter-header">Protection class</button>
+                </div>
+                <div class="filter-category">
+                    <button class="filter-header">Built-in memory</button>
+                </div>
+            </div>
+
             <div class="products">
-                <img src="images/Product Card0.png" alt="item">
                 <img src="images/Product Card.png" alt="item">
                 <img src="images/Product Card (1).png" alt="item">
                 <img src="images/Product Card (2).png" alt="item">
@@ -164,10 +381,58 @@
                 <img src="images/Product Card (5).png" alt="item">
                 <img src="images/Product Card (6).png" alt="item">
                 <img src="images/Product Card (7).png" alt="item">
+                <img src="images/Product Card (8).png" alt="item">
+                <div class="pagination">
+                    <span class="page-number active">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <span class="dots">...</span>
+                    <span class="page-number">12</span>
+                </div>
             </div>
         </div>
 
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="footer-section">
+                <img src="images/Logo (beyaz).png" alt="Cyber Logo" class="footer-logo">
+                <p class="footer-description">
+                    We are a residential interior design firm located in Portland.
+                    Our boutique-studio offers more than
+                </p>
+
+                <div class="social-icons">
+                    <img src="images/Twitter.png" alt="Twitter" class="social-icon">
+                    <img src="images/Facebook.png" alt="Facebook" class="social-icon">
+                    <img src="images/Tiktok.png" alt="TikTok" class="social-icon">
+                    <img src="images/Instagram.png" alt="Instagram" class="social-icon">
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li>Bonus program</li>
+                    <li>Gift cards</li>
+                    <li>Credit and payment</li>
+                    <li>Service contracts</li>
+                    <li>Non-cash account</li>
+                    <li>Payment</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Assistance to the buyer</h3>
+                <ul class="footer-links">
+                    <li>Find an order</li>
+                    <li>Terms of delivery</li>
+                    <li>Exchange and return of goods</li>
+                    <li>Guarantee</li>
+                    <li>Frequently asked questions</li>
+                    <li>Terms of use of the site</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </body>
 
