@@ -181,19 +181,52 @@
 
         }
 
-        .item {
-            background-color: #ffe0f0;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .product-card {
+            width: 250px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
         }
 
-        .item img {
-            max-width: 100%;
+        .product-card .heart-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .product-card .product-image {
+            width: 100px;
             height: auto;
-            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .product-card .product-info {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin: 10px 0;
+        }
+
+        .product-card .buy-now {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
         }
 
         .pagination {
@@ -314,7 +347,7 @@
     <div class="container">
         <nav class="nav">
             <div class="nav-left">
-                <img src="images/Logo.png" Logo" class="logo">
+                <img src="images/Logo.png" alt="Logo" class="logo">
             </div>
             <div class="nav-center">
                 <input type="text" placeholder="Search" class="search-bar">
@@ -373,15 +406,69 @@
             </div>
 
             <div class="products">
-                <img src="images/Product Card.png" alt="item">
-                <img src="images/Product Card (1).png" alt="item">
-                <img src="images/Product Card (2).png" alt="item">
-                <img src="images/Product Card (3).png" alt="item">
-                <img src="images/Product Card (4).png" alt="item">
-                <img src="images/Product Card (5).png" alt="item">
-                <img src="images/Product Card (6).png" alt="item">
-                <img src="images/Product Card (7).png" alt="item">
-                <img src="images/Product Card (8).png" alt="item">
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 1.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 512GB Gold (MQ233)</div>
+                    <div class="product-price">$1437</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 2.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 11 128GB White (MQ233)</div>
+                    <div class="product-price">$510</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 3.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 11 128GB White (MQ233)</div>
+                    <div class="product-price">$550</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 4.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</div>
+                    <div class="product-price">$1499</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 5.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</div>
+                    <div class="product-price">$1399</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 6.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 128GB Deep Purple (MQOG3)</div>
+                    <div class="product-price">$1600</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 7.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 13 Mini 128GB Pink (MLK23)</div>
+                    <div class="product-price">$850</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 8.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 256GB Space Black (MQ0T3)</div>
+                    <div class="product-price">$1399</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/Favorites.png" alt="Favorites" class="heart-icon">
+                    <img src="images/Iphone 14 pro 9.png" alt="iPhone Image" class="product-image">
+                    <div class="product-info">Apple iPhone 14 Pro 256GB Silver (MQ103)</div>
+                    <div class="product-price">$1399</div>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
                 <div class="pagination">
                     <span class="page-number active">1</span>
                     <span class="page-number">2</span>
