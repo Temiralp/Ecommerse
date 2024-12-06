@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <style>
+body{
+    margin: 0;
+}
+.nav{
+    background-color: white;
+    width: 455px;
+    height: 100px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.line1{
+    background-color: rgb(206, 206, 206);
+    width: 458px;
+    height: 2px;
+}
+.filters{
+    background-color: white;
+    width: 100px;
+    height: 150px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    background-color: white;
+    width: 455px;
+    height: 60px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    font-size: 17px;
+    margin-bottom: 4px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.line2{
+    background-color: rgb(222, 222, 222);
+    width: 458px;
+    height: 2px;
+}
+.pricef{
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+.brand{
+    background-color: white;
+    width: 460px;
+    height: 60px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.line3{
+    background-color: rgb(210, 210, 210);
+    width: 458px;
+    height: 2px;
+}
+.searchbar{
+    background-color: white;
+    width: 480px;
+    height: 100px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.rounds{
+    background-color: white;
+    width: 420px;
+    height: 3px;
+    padding-left: 22px;
+    display:flex;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+}
+.rounds-text{
+    background-color: transparent;
+    width:auto;
+    height: 470px;
+    padding-left: 50px;
+    padding-bottom: 60px;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: -14px;
+    line-height: 52px;
+    white-space: nowrap;
+    position: relative;
+}
+.scroll{
+    background-color:transparent;
+    width:10px;
+    height:400px;
+    position: absolute;
+    top: 820px;
+    left:455px;
+}
+.built{
+    background-color: transparent;
+    width:457px;
+    height:79px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.line4{
+    background-color: rgb(217, 217, 217);
+    width: 458px;
+    height: 2px;
+}
+.searchbar2{
+    background-color: white;
+    width: 480px;
+    height: 100px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.rounds2{
+    background-color: white;
+    width: 420px;
+    height: 3px;
+    padding-left: 22px;
+    display:flex;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+}
+.rounds-text2{
+    background-color: transparent;
+    width:auto;
+    height: 350px;
+    padding-left: 50px;
+    padding-bottom: 60px;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: -14px;
+    line-height: 52px;
+    white-space: nowrap;
+    position: relative;
+}
+.scroll2{
+    background-color:transparent;
+    width:10px;
+    height:305px;
+    position: absolute;
+    top: 1534px;
+    left:455px;
+}
+.protection-class{
+    background-color: transparent;
+    width: 454px;
+    height: 70px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.line5{
+    background-color: rgb(222, 222, 222);
+    width: 458px;
+    height: 2px;
+    margin-bottom: 44px;
+}
+.screen-diagonal{
+    background-color: transparent;
+    width: 454px;
+    height: 70px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.line6{
+    background-color: rgb(222, 222, 222);
+    width: 458px;
+    height: 2px;
+    margin-bottom: 44px;
+}
+.screen-type{
+    background-color: transparent;
+    width: 454px;
+    height: 70px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.line7{
+    background-color: rgb(222, 222, 222);
+    width: 458px;
+    height: 2px;
+    margin-bottom: 44px;
+}
+.battery-capacity{
+    background-color: transparent;
+    width: 454px;
+    height: 70px;
+    padding-left: 10px;
+    font-family: Montserrat;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.line8{
+    background-color: rgb(222, 222, 222);
+    width: 458px;
+    height: 2px;
+    margin-bottom: 44px;
+}
+.Apply{
+    background-color: transparent;
+    width: 454;
+    height: 70px;
+    padding-left: 7px;
+    margin-bottom: 36px;
+}
+.black-area{
+    background-color: black;
+    width: 462px;
+    height: 1000px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    position:absolute;
+}
+.black-area-text{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-family: Montserrat;
+    position: relative;
+}
+.black-area-text2{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-family: Montserrat;
+    position: relative;
+}
+.black-area-text2 p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.black-area-text3{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-family: Montserrat;
+    position: relative;
+}
+.black-area-text3 p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.social-icons{
+    background-color: transparent;
+    width:400px;
+    padding-left: 147px;
+    padding-top: 40px;
+    position: relative;
+}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="images/Logo.png" alt=
+        "Logo.png" width="130" height="50">
+        <img src="images/Burger.png" alt=
+        "Burger.png" width="70" height="70">
+    </div>
+
+    <div class="line1">
+    </div>
+
+    <div class="filters">
+        <img src="images/Top.png" alt=
+        "Top.png" width="800" height="50">
+    </div>
+
+    <div class="price">
+        <h1>Price</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="46" height="50">
+    </div>
+
+    <div class="line2">
+    </div>
+
+    <div class="pricef">
+        <img src="images/Price Filter.png" alt=
+        "Price Filter.png" width="460" height="140">
+    </div>
+
+    <div class="brand">
+        <h1>Brand</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+
+    <div class="line3">
+    </div>
+
+    <div class="searchbar">
+        <img src="images/Search Field.png" alt=
+        "Search Field.png" width="440" height="67">
+    </div>
+
+    <div class="rounds">
+        <img src="images/Done_round.png" alt=
+        "Done_round.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+    </div>
+
+    <div class="rounds-text">
+        Apple <span style="font-size:15px; color: rgb(181, 181, 181);">110</span><br>
+        Samsung <span style="font-size:15px; color: rgb(181, 181, 181);">125</span><br>
+        Xiaomi <span style="font-size:15px;color: rgb(181, 181, 181);">68</span><br>
+        Poco <span style="font-size:15px; color: rgb(181, 181, 181);">44</span><br>
+        OPPO <span style="font-size:15px; color: rgb(181, 181, 181);">36</span><br>
+        Honor <span style="font-size:15px; color: rgb(181, 181, 181);">10</span><br>
+        Motorola <span style="font-size:15px; color: rgb(181, 181, 181);">34</span><br>
+        Nokia <span style="font-size:15px; color: rgb(181, 181, 181);">22</span><br>
+        Realme <span style="font-size:15px; color: rgb(181, 181, 181);">35</span>
+    </div>
+
+    <div class="scroll">
+        <img src="images/Scroll.png" alt=
+        "Scroll.png" width="3" height="470">
+    </div>
+
+    <div class="built">
+        <h1>Built-in memory</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+
+    <div class="line4">
+    </div>
+
+    <div class="searchbar2">
+        <img src="images/Search Field.png" alt=
+        "Search Field.png" width="440" height="67">
+    </div>
+
+    <div class="rounds2">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+        <img src="images/Done_round2.png" alt=
+        "Done_round2.png" width="30" height="30">
+    </div>
+    
+    <div class="rounds-text2">
+        16GB <span style="font-size:15px; color: rgb(181, 181, 181);">65</span><br>
+        32GB <span style="font-size:15px; color: rgb(181, 181, 181);">123</span><br>
+        64GB <span style="font-size:15px;color: rgb(181, 181, 181);">48</span><br>
+        128GB <span style="font-size:15px; color: rgb(181, 181, 181);">50</span><br>
+        256GB <span style="font-size:15px; color: rgb(181, 181, 181);">24</span><br>
+        512GB <span style="font-size:15px; color: rgb(181, 181, 181);">8</span><br>
+    </div>
+
+    <div class="scroll2">
+        <img src="images/Scroll.png" alt=
+        "Scroll.png" width="3" height="305">
+    </div>
+
+    <div class="protection-class">
+        <h1>Protection class</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+
+    <div class="line5">
+    </div>
+
+    <div class="screen-diagonal">
+        <h1>Screen diagonal</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+    
+    <div class="line6">
+    </div>
+
+    <div class="screen-type">
+        <h1>Screen type</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+
+    <div class="line7">
+    </div>
+
+    <div class="battery-capacity">
+        <h1>Battery capacity</h1>
+        <img src="images/Expand_down.png" alt=
+        "Expand_down.png" width="37" height="40">
+    </div>
+
+    <div class="line8">
+    </div>
+
+    <div class="Apply">
+        <img src="images/Button2.png" alt=
+        "Button2.png" width="456" height="68">
+    </div>
+
+    <div class="black-area">
+    </div>
+
+    <div class="black-area-text">
+        <h1 style="color: white;">cyber
+        </h1>
+        <p style="color: white; font-weight: 200;">We are a residential interior design firm located in <br>
+            Portland. Our boutique-studi offers more than
+        </p>
+    </div>
+
+    <div class="black-area-text2">
+            <h1 style="color: white; font-size: 24px;">Services
+            </h1>
+            <p style="color: white; font-weight: 200;">Bonus program
+            </p>
+            <p style="color: white; font-weight: 200;">Gift cards
+            </p>
+            <p style="color: white; font-weight: 200;">Credit and payment
+            </p>
+            <p style="color: white; font-weight: 200;">Service contracts
+            </p>
+            <p style="color: white; font-weight: 200;">Non-cash account
+            </p>
+            <p style="color: white; font-weight: 200;">Payment
+            </p>
+    </div>
+
+    <div class="black-area-text3">
+            <h1 style="color: white; font-size: 24px;">Assistance to the buyer
+            </h1>
+            <p style="color: white; font-weight: 200;">Find an order
+            </p>
+            <p style="color: white; font-weight: 200;">Terms of delivery
+            </p>
+            <p style="color: white; font-weight: 200;">Exchange and return of goods
+            </p>
+            <p style="color: white; font-weight: 200;">Guarantee
+            </p>
+            <p style="color: white; font-weight: 200;">Frequently asked questions
+            </p>
+            <p style="color: white; font-weight: 200;">Terms of use of the site
+            </p>
+    </div>
+
+    <div class="social-icons">
+        <img src="images/Social Icons.png" alt="">
+    </div>
+
+
+</body>
+</html>
